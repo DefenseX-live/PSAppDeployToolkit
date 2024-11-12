@@ -1,0 +1,11 @@
+C:\Users\RichardHarris\Desktop\npp.8.7.1.Installer.x64.exe
+C:\Program Files\Notepad++\updater\libcurl.dll
+C:\Program Files\Notepad++\updater\GUP.exe
+C:\Program Files\Notepad++\uninstall.exe
+C:\Program Files\Notepad++\plugins\NppExport\NppExport.dll
+C:\Program Files\Notepad++\plugins\NppConverter\NppConverter.dll
+C:\Program Files\Notepad++\plugins\mimeTools\mimeTools.dll
+C:\Program Files\Notepad++\plugins\Config\nppPluginList.dll
+C:\Program Files\Notepad++\notepad++.exe
+C:\Program Files\Notepad++\contextMenu\NppShell.msix
+C:\Program Files\Notepad++\contextMenu\NppShell.dll
