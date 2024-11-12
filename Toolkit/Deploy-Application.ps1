@@ -260,7 +260,7 @@ Try {
 
         
         ## TODO <Perform Uninstallation tasks here>
-        Execute-Process -Path "$env:Programfile\Notepad++\uninstall.exe" -Paramters "/S" -IgnoreExitCodes '*' -ContinueOnError $true
+        Execute-Process -Path "$env:ProgramFiles\Notepad++\uninstall.exe" -Paramters "/S" -IgnoreExitCodes '*' -ContinueOnError $true
 
         ##*===============================================
         ##* MARK: POST-UNINSTALLATION
@@ -303,7 +303,7 @@ Try {
         }
 
         ## TODO <Perform Repair tasks here>
-        Execute-Process -Path "$env:Programfile\Notepad++\uninstall.exe" -Paramters "/S" -IgnoreExitCodes '*' -ContinueOnError $true
+        Execute-Process -Path "$env:ProgramFiles\Notepad++\uninstall.exe" -Paramters "/S" -IgnoreExitCodes '*' -ContinueOnError $true
         Execute-Process -Path "npp.8.7.1.Installer.x64.exe" -Parameters "\S"
         
         ##*===============================================
