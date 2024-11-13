@@ -15,7 +15,8 @@
         "Examples": true,
         ".gitattributes": true,
         ".gitignore": true,
-        "mkdocs.yml": true
+        "mkdocs.yml": true,
+        "pl.ps1": true
     },
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
