@@ -1,7 +1,7 @@
 
 
 Write-host "Testing has started..." -ForegroundColor Cyan
-Start-Process -FilePath "C:\Users\WDAGUtilityAccount\Desktop\notepad++\Deploy-Application.exe" -Wait
+Start-Process -FilePath "C:\Users\WDAGUtilityAccount\Desktop\notepad++\Deploy-Application.exe"  -Wait
 Write-host "Installation completed" -ForegroundColor DarkGreen
 Write-host "you have 60 seconds to verify the installation before it is automatically uninstalled" -ForegroundColor Cyan
 

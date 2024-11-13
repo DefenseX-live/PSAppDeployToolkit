@@ -8,9 +8,9 @@ Get-installedModule -Name IntuneWin32App
 Connect-MSIntuneGraph -TenantID "memtipsandtricks.tech" -Verbose
 
 
-    $Publisher = "Application WP Ninja DEMO"
+    $Publisher = "Don Ho"
     $IntuneWinFile = "$Desktop\$Application\$Application.intunewin"
-    $AppIconFile = "C:\- Stuff -\DEMO\notepad.jpg"
+    $AppIconFile = "C:\Users\RichardHarris\Documents\Github\PSAppDeployToolkit\Toolkit\SupportFiles\Notepad++Image.jpg"
 
     # Create custom display name like 'Name' and 'Version'
     $DisplayName = "Notepad++"

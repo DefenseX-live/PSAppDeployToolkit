@@ -212,7 +212,7 @@ Try {
 
         
         ##  <Perform Installation tasks here>
-        Execute-Process -Path "npp.8.7.1.Installer.x64.exe" -Parameters "\S"
+        Execute-Process -Path "npp.8.7.1.Installer.x64.exe" -Parameters "/S" -WindowStyle Hidden
 
         ##*===============================================
         ##* MARK: POST-INSTALLATION
@@ -221,10 +221,19 @@ Try {
 
         
         ## TODO <Perform Post-Installation tasks here>
+        # $config_dir = "C:\Users\WDAGUtilityAccount\Desktop\notepad++\SupportFiles\config.model.xml"
+        # $xml = Get-ChildItem -Path "$config_dir" -Include config.model.xml -File -Recurse -ErrorAction SilentlyContinue
+        # If($xml.Exists)
+        # {
+        # If (Test-Path -Path "$envProgramFiles\Notepad++\") {
+        # Write-Log -Message "Copying config.model.xml file to Notepad++ installation directory."
+        # Copy-Item -Path "$dirSupportFiles\config.model.xml" -Destination "$envProgramFiles\Notepad++\" -Force -Recurse -ErrorAction SilentlyContinue
+        # Start-Sleep -Seconds 5
+        # }
 
         ## Display a message at the end of the install
         If (-not $useDefaultMsi) {
-            Show-InstallationPrompt -Message 'You can customize text to appear at the end of an install or remove it completely for unattended installations.' -ButtonRightText 'OK' -Icon Information -NoWait
+           # Show-InstallationPrompt -Message 'IS THIS WHAT I NEED TO COMMENT OUT?' -ButtonRightText 'OK' -Icon Information -NoWait
         }
     }
     ElseIf ($deploymentType -ieq 'Uninstall') {
@@ -260,7 +269,7 @@ Try {
 
         
         ## TODO <Perform Uninstallation tasks here>
-        Execute-Process -Path "$env:ProgramFiles\Notepad++\uninstall.exe" -Paramters "/S" -IgnoreExitCodes '*' -ContinueOnError $true
+        Execute-Process -Path "$env:ProgramFiles\Notepad++\uninstall.exe" -Parameters "/S" -IgnoreExitCodes '*' -ContinueOnError $true
 
         ##*===============================================
         ##* MARK: POST-UNINSTALLATION
@@ -304,7 +313,7 @@ Try {
 
         ## TODO <Perform Repair tasks here>
         Execute-Process -Path "$env:ProgramFiles\Notepad++\uninstall.exe" -Paramters "/S" -IgnoreExitCodes '*' -ContinueOnError $true
-        Execute-Process -Path "npp.8.7.1.Installer.x64.exe" -Parameters "\S"
+        Execute-Process -Path "npp.8.7.1.Installer.x64.exe" -Parameters "/S"
         
         ##*===============================================
         ##* MARK: POST-REPAIR
